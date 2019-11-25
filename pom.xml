@@ -32,16 +32,6 @@
         </dependency>
         
     </dependencies>
-	
-    <reporting>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jxr-plugin</artifactId>
-                <version>LATEST</version>
-            </plugin>
-        </plugins>
-    </reporting>
    
     <build>
         <plugins>
@@ -98,28 +88,6 @@
                     </execution>
                 </executions>
             </plugin>
-            
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-pmd-plugin</artifactId>
-                <version>3.5</version>
-                <configuration>
-                    <linkXref>true</linkXref>
-                    <sourceEncoding>UTF8</sourceEncoding>
-                    <minimumTokens>30</minimumTokens>
-                    <targetJdk>1.8</targetJdk>                    
-                </configuration>
-                <executions>
-                    <execution>
-                        <phase>verify</phase>
-                        <goals>
-                            <goal>pmd</goal>
-                            <goal>cpd</goal>
-                        </goals>
-                        
-                    </execution>
-                </executions>
-            </plugin>	
             
         </plugins>
     </build>
